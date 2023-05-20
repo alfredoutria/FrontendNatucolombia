@@ -48,10 +48,10 @@ function NavBar() {
                         
                         <NavDropdown className='NavDropdown' title="Lugares turisticos" id="navbarScrollingDropdown">
                         {lista.map((dato) => (
-                           <Link className='NavItem' to={`/contenido/${dato._id}`}>{dato.nombre}</Link>
+                            <NavDropdown.Item className='NavItem' as={Link} to={`/contenido/${dato._id}`} key={dato._id}>{dato.nombre}</NavDropdown.Item>
                             ))}
                         </NavDropdown>
-                        <Nav.Link href="/nosotros">Acerca de nosotros</Nav.Link>
+                        <Nav.Link as={Link} to={"/nosotros"}>Acerca de nosotros</Nav.Link>
                     </Nav>
 
                 </Navbar.Collapse>

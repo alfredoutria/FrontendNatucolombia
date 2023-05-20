@@ -49,7 +49,7 @@ function Tarjeta() {
         <Card.Text>
         {dato.contenidoCorto}
         </Card.Text>
-        <Link to={`/contenido/${dato._id}`} style={{textDecoration:'none', color:'green', fontWeight:'bold', fontSize:'18px'}}>Más detalles</Link>
+        <Card.Link as={Link} to={`/contenido/${dato._id}`} style={{textDecoration:'none', color:'green', fontWeight:'bold', fontSize:'18px'}}>Más detalles</Card.Link>
       </Card.Body>
     </Card>
     ))}
