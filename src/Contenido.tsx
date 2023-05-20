@@ -108,13 +108,13 @@ function Contenido() {
             data-aos-easing="ease-out-cubic"
             data-aos-duration="2000" xs={12} md={4}>
             <h2 style={{textAlign:'center'}}>Ubicación</h2>
-            <p style={{textAlign:'left'}}>{dato.ubicacion}</p>
+            <p>{dato.ubicacion}</p>
           </Col>
           <Col data-aos="flip-left"
             data-aos-easing="ease-out-cubic"
             data-aos-duration="2000" xs={12} md={4}>
             <h2 style={{textAlign:'center'}}>Temperatura</h2>
-            <p style={{textAlign:'left'}}>{dato.temperatura}</p>
+            <p>{dato.temperatura}</p>
           </Col>
           <Col data-aos="flip-left"
             data-aos-easing="ease-out-cubic"
