@@ -114,7 +114,7 @@ function Contenido() {
             data-aos-easing="ease-out-cubic"
             data-aos-duration="2000" xs={12} md={4}>
             <h2 style={{textAlign:'center'}}>Temperatura</h2>
-            <p>{dato.temperatura}</p>
+            <p style={{textAlign:'center'}}>{dato.temperatura}</p>
           </Col>
           <Col data-aos="flip-left"
             data-aos-easing="ease-out-cubic"
