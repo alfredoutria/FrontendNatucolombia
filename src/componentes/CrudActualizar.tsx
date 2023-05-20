@@ -148,7 +148,7 @@ function Crud() {
 
                     <Row className="mb-3">
                         <Form.Group className="mb-3" as={Col} xs="12" md="12" controlId="contenido" >
-                            <Form.Control as="textarea" placeholder="Escriba su contenido aquí" defaultValue={dato.contenidoCorto} onChange={change} />
+                            <Form.Control as="textarea" placeholder="Escriba su contenido aquí" defaultValue={dato.contenido} onChange={change} />
                         </Form.Group>
                     </Row>
                 </Row>
