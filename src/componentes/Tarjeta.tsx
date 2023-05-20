@@ -1,4 +1,5 @@
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Url from './Url';
@@ -48,7 +49,7 @@ function Tarjeta() {
         <Card.Text>
         {dato.contenidoCorto}
         </Card.Text>
-        <Card.Link href={`/contenido/${dato._id}`} style={{textDecoration:'none', color:'green', fontWeight:'bold', fontSize:'18px'}}>Más detalles</Card.Link>
+        <Link to={`/contenido/${dato._id}`} style={{textDecoration:'none', color:'green', fontWeight:'bold', fontSize:'18px'}}>Más detalles</Link>
       </Card.Body>
     </Card>
     ))}

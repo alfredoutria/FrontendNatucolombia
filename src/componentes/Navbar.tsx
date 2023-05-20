@@ -1,4 +1,5 @@
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Url from './Url';
@@ -47,7 +48,7 @@ function NavBar() {
                         
                         <NavDropdown className='NavDropdown' title="Lugares turisticos" id="navbarScrollingDropdown">
                         {lista.map((dato) => (
-                            <NavDropdown.Item className='NavItem' href={`/contenido/${dato._id}`} key={dato._id}>{dato.nombre}</NavDropdown.Item>
+                           <Link className='NavItem' to={`/contenido/${dato._id}`}>{dato.nombre}</Link>
                             ))}
                         </NavDropdown>
                         <Nav.Link href="/nosotros">Acerca de nosotros</Nav.Link>
