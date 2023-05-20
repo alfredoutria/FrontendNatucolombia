@@ -66,7 +66,7 @@ function Contenido() {
     <div className="bodyContenido">
       <div className="fondo"></div>
       <NavBar />
-      <Container  data-aos="fade-up" fluid style={{ maxWidth: "95%", marginTop:'130px' }}>
+      <Container  data-aos="fade-up" fluid style={{ maxWidth: "95%", marginTop:'130px', marginBottom:'100px' }}>
         <Row style={{ color: 'white' }}>
           <Col xs={12} md={6}>
             <h1 style={{ textAlign: 'center' }}>{dato.nombre}</h1>
