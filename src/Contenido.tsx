@@ -77,6 +77,7 @@ function Contenido() {
           </Col>
         </Row>
       </Container>
+      <br></br>
       <Container className='escritorioContainer'>
         <Row >
           <Col  data-aos="zoom-in" xs={12} md={6}>
@@ -123,6 +124,7 @@ function Contenido() {
           </Col>
         </Row>
       </Container>
+      <br></br>
       <Container className='escritorioContainer'>
         <Row>
           <Col  data-aos="zoom-in" xs={12} md={6}>
