@@ -10,13 +10,15 @@ function Comentario() {
     const [comentario, setComentario] = useState({
 
         nombre: '',
-        ciudad:'',
-        pais:'',
+        correo:'',
         mensaje:''
 
     });
 
-    const handleClose = () => setShow(false);
+    const handleClose = () => {
+        
+        setShow(false)
+    }
 
     const enviar = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
@@ -30,6 +32,12 @@ function Comentario() {
             const response = await axios.post(Url.comentario, comentario);
             console.log('Enviado ', response);
             console.log('Datos ' + comentario.nombre);
+            setComentario({
+                nombre: '',
+                correo:'',
+                mensaje:''
+            })
+    
             setShow(true);
         } catch (error) {
             console.error(error);
@@ -79,19 +87,19 @@ function Comentario() {
                <br></br>
                     <Row>
                         <Row className="mb-3">
-                            <Form.Group className="mb-3" as={Col} xs="12" md="12" controlId="nombre" onChange={change}>
-                                <Form.Control size='lg' type="text" placeholder="Nombre" />
+                            <Form.Group className="mb-3" as={Col} xs="12" md="12" controlId="nombre" >
+                                <Form.Control size='lg' type="text" placeholder="Nombre" value={comentario.nombre} onChange={change}/>
                             </Form.Group>
                         </Row>
                         <Row className="mb-3">
-                            <Form.Group className="mb-3" as={Col} xs="12" md="12" controlId="correo" onChange={change}>
-                                <Form.Control size='lg' type="text" placeholder="Correo electrónico" />
+                            <Form.Group className="mb-3" as={Col} xs="12" md="12" controlId="correo" >
+                                <Form.Control size='lg' type="text" placeholder="Correo electrónico" value={comentario.correo} onChange={change}/>
                             </Form.Group>
                         </Row>
                       
                         <Row className="mb-3">
-                            <Form.Group className="mb-3" as={Col} xs="12" md="12" controlId="mensaje" onChange={change} >
-                                <Form.Control as="textarea" placeholder="Escriba aquí su comentario" style={{height:'200px'}} />
+                            <Form.Group className="mb-3" as={Col} xs="12" md="12" controlId="mensaje" >
+                                <Form.Control as="textarea" placeholder="Escriba aquí su comentario" style={{height:'200px'}} value={comentario.mensaje} onChange={change}  />
                             </Form.Group>
                         </Row>
                     </Row>

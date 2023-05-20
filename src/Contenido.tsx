@@ -90,10 +90,10 @@ function Contenido() {
        
       <Container className='movilContainer'>
         <Row >
-          <Col  data-aos="fade-right" xs={12} md={6}>
+          <Col  data-aos="flip-right" xs={12} md={6}>
             <img className='columnaImagen' src={dato.urlimagen1} alt="imagen" />
           </Col>
-          <Col data-aos="fade-left" xs={12} md={6}>
+          <Col data-aos="flip-left" xs={12} md={6}>
             <img className='columnaImagen' src={dato.urlimagen2} alt="imagen" />
           </Col>
         </Row>
@@ -124,7 +124,7 @@ function Contenido() {
         </Row>
       </Container>
       <Container className='escritorioContainer'>
-        <Row data-aos="zoom-in" >
+        <Row>
           <Col  data-aos="zoom-in" xs={12} md={6}>
             <img className='columnaImagen' src={dato.urlimagen3}  alt="imagen" />
           </Col>
@@ -135,11 +135,11 @@ function Contenido() {
       </Container>
 
       <Container className='movilContainer' >
-        <Row data-aos="fade-right" >
-          <Col  data-aos="zoom-in" xs={12} md={6}>
+        <Row >
+          <Col  data-aos="flip-right" xs={12} md={6}>
             <img className='columnaImagen' src={dato.urlimagen3}  alt="imagen" />
           </Col>
-          <Col  data-aos="fade-left" xs={12} md={6}>
+          <Col  data-aos="flip-left" xs={12} md={6}>
             <img className='columnaImagen' src={dato.urlimagen4}  alt="imagen" />
           </Col>
         </Row>

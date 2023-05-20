@@ -82,7 +82,7 @@
   background-color: rgb(9, 161, 136);
   border-radius: 10px;
   padding: 10px;
-  font-size: 30px !important;
+  font-size: 0px !important;
   color: white !important;
   margin-left: 200px;
 }
@@ -261,6 +261,7 @@ footer {
     background-color: white;
     margin: 0px;
     margin-bottom: 200px;
+    max-width: 100%;
   }
   
 
@@ -268,7 +269,7 @@ footer {
     background-color: rgb(9, 161, 136);
     border-radius: 10px;
     padding: 10px;
-    font-size: 30px !important;
+    font-size: 20px !important;
     color: white !important;
     margin-left: 0px;
   }
@@ -276,11 +277,25 @@ footer {
   .nav-link {
     font-family: 'Roboto', sans-serif;
     color: rgb(0, 0, 0) !important;
-    font-size: 20px !important;
+    font-size: 17px !important;
   }
 
   .NavDropdown .dropdown-menu {
     background-color: rgb(9, 161, 136);
+  }
+
+  .navbar-toggler{
+    border: 2px solid  rgb(9, 161, 136) !important;
+    background: white !important;
+    font-size: 15px;
+  }
+
+  .navbar-toggler-icon{
+   font-size: 15px;
+  }
+  
+  .NavItem{
+    font-size: 17px;
   }
 
   .Carousel {
@@ -340,6 +355,8 @@ footer {
     width: 25px;
     margin-left:1px;
   }
+
+  
 
   footer{
     font-family: Arial, Helvetica, sans-serif;

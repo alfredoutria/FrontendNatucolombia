@@ -40,9 +40,9 @@ function NavBar() {
 
         <>
             <Navbar className='navbar' fixed="top" expand="lg">
-                <Navbar.Brand href="/">NatuColombia</Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
+                <Navbar.Brand as={Link} to={'/'}>NatuColombia</Navbar.Brand>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="navIzquierda">
                         <Nav.Link href="/">Inicio</Nav.Link>
                         
