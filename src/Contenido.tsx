@@ -103,23 +103,23 @@ function Contenido() {
 
 
       <Container style={{ maxWidth: "95%", marginTop:'30px' }}>
-        <Row style={{ textAlign: 'center', color: 'white' }}>
+        <Row style={{color: 'white' }}>
           <Col data-aos="flip-left"
             data-aos-easing="ease-out-cubic"
             data-aos-duration="2000" xs={12} md={4}>
-            <h2>Ubicación</h2>
+            <h2 style={{textAlign:'center'}}>Ubicación</h2>
             <p style={{textAlign:'left'}}>{dato.ubicacion}</p>
           </Col>
           <Col data-aos="flip-left"
             data-aos-easing="ease-out-cubic"
             data-aos-duration="2000" xs={12} md={4}>
-            <h2>Temperatura</h2>
+            <h2 style={{textAlign:'center'}}>Temperatura</h2>
             <p style={{textAlign:'left'}}>{dato.temperatura}</p>
           </Col>
           <Col data-aos="flip-left"
             data-aos-easing="ease-out-cubic"
             data-aos-duration="2000" xs={12} md={4}>
-            <h2>Como llegar?</h2>
+            <h2 style={{textAlign:'center'}}>Como llegar?</h2>
             <p style={{textAlign:'left'}}>{dato.comollegar}</p>
           </Col>
         </Row>
