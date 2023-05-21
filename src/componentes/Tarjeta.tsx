@@ -39,7 +39,7 @@ function Tarjeta() {
 
   return (
     <>
-    <div style={{marginTop:'100px'}}>
+    <div style={{marginTop:'80px'}}>
     {lista.map((dato)=>(
     <Card className='tarjeta' key={dato._id}>
       <a href={`/contenido/${dato._id}`} > 
