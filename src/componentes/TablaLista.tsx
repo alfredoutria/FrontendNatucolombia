@@ -1,6 +1,5 @@
 import {Table, Button} from 'react-bootstrap';
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Url from './Url';
 
@@ -42,7 +41,7 @@ function TablaLista() {
   return (
     <>
     <div className="text-center" style={{marginTop:'150px'}}>
-     <Button variant="primary" ><Link to={'/agregar'} style={{color:'white', fontWeight:'bold', textDecoration:'none'}}>Agregar</Link></Button>
+     <Button variant="primary" ><a href={'/agregar'} style={{color:'white', fontWeight:'bold', textDecoration:'none'}}>Agregar</a></Button>
     </div>
     
       <div className="table-container" style={{marginTop:'-15px'}}>
@@ -61,8 +60,8 @@ function TablaLista() {
               <tr key={dato._id}>
                 <td>{dato._id}</td>
                 <td>{dato.nombre}</td>
-                <td><Link style={{textDecoration:'none', fontWeight:'bold'}} to={`/actualizar/${dato._id}`}>Actualizar</Link></td>
-                <td><Link style={{textDecoration:'none', fontWeight:'bold'}} to={`/eliminar/${dato._id}`}>Eliminar</Link></td>
+                <td><a style={{textDecoration:'none', fontWeight:'bold'}} href={`/actualizar/${dato._id}`}>Actualizar</a></td>
+                <td><a style={{textDecoration:'none', fontWeight:'bold'}} href={`/eliminar/${dato._id}`}>Eliminar</a></td>
               </tr>
             ))}
           </tbody>

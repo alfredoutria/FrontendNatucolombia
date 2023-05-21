@@ -130,6 +130,7 @@
   background-color: black;
 }
 
+
 video {
   position: fixed;
   top: 0;
@@ -280,10 +281,12 @@ footer {
   }
 
   .nav-link {
+    margin-top: 10px;
     font-family: 'Roboto', sans-serif;
     color: rgb(0, 0, 0) !important;
     font-size: 17px !important;
   }
+  
 
   .NavDropdown .dropdown-menu {
     background-color: rgb(9, 161, 136);
@@ -305,6 +308,10 @@ footer {
 
   .Carousel {
     margin-top: 100px;
+    display: none;
+  }
+
+  .containerCarrusel{
     display: none;
   }
 

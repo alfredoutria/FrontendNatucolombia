@@ -1,5 +1,4 @@
 import Card from 'react-bootstrap/Card';
-import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Url from './Url';
@@ -43,15 +42,20 @@ function Tarjeta() {
     <div style={{marginTop:'100px'}}>
     {lista.map((dato)=>(
     <Card className='tarjeta' key={dato._id}>
-      <Card.Img className='imagenTarjeta' variant='top' src={dato.urlimagen1}  />
-      <Card.Body>
+      <a href={`/contenido/${dato._id}`} > 
+        <Card.Img className='imagenTarjeta' variant='top' src={dato.urlimagen1}  />
+      </a>
+     
+      <a href={`/contenido/${dato._id}`}  style={{textDecoration:'none', color:'black'}}><Card.Body>
         <Card.Title>{dato.nombre}</Card.Title>
         <Card.Text>
         {dato.contenidoCorto}
         </Card.Text>
-        <Card.Link as={Link} to={`/contenido/${dato._id}`} style={{textDecoration:'none', color:'green', fontWeight:'bold', fontSize:'18px'}}>Más detalles</Card.Link>
+        <Card.Link href={`/contenido/${dato._id}`} style={{textDecoration:'none', color:'green', fontWeight:'bold', fontSize:'18px'}}>Más detalles</Card.Link>
       </Card.Body>
+      </a>
     </Card>
+    
     ))}
     </div>
     </>
