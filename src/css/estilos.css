@@ -195,6 +195,11 @@ video {
   border-radius:20px;
 }
 
+.containerTituloContenido{
+  max-width: 95%;
+   margin-top: 130px; 
+   margin-bottom: 100px; 
+}
 
 .escritorioContainer{
   display:contents;
@@ -321,6 +326,10 @@ footer {
     margin-left: 20px;
     margin-right: 20px;
     display: block !important;
+  }
+
+  .containerTituloContenido{
+     margin-bottom: 10px; 
   }
 
   .escritorioContainer{
