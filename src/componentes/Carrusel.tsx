@@ -27,13 +27,14 @@ function Carrusel() {
 
     useEffect(() => {
         obtenerlista();
+        setCargar(false);
     }, []);
   
     const obtenerlista = async () => {
       try {
         const res = await axios.get(Url.lista);
         setLista(res.data);
-        setCargar(false);
+        
       } catch (error) {
         console.error(error);
       }

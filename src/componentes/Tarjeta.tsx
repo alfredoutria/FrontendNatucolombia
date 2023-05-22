@@ -27,6 +27,7 @@ function Tarjeta() {
 
   useEffect(() => {
       obtenerlista();
+      setCargar(false);
   }, []);
 
   const obtenerlista = async () => {
