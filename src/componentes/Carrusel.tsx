@@ -1,5 +1,6 @@
 import {Carousel, Container, Row, Col} from 'react-bootstrap';
 import { useState, useEffect } from 'react';
+import CircularProgress from '@mui/material/CircularProgress';
 import axios from 'axios';
 import Url from './Url';
 
@@ -22,6 +23,7 @@ interface Informacion {
 function Carrusel() {
 
     const [lista, setLista] = useState<Informacion[]>([]);
+    const [cargar, setCargar] = useState(true);
 
     useEffect(() => {
         obtenerlista();
@@ -31,6 +33,7 @@ function Carrusel() {
       try {
         const res = await axios.get(Url.lista);
         setLista(res.data);
+        setCargar(false);
       } catch (error) {
         console.error(error);
       }
@@ -39,7 +42,14 @@ function Carrusel() {
     return (
       <>
         <Carousel className='Carousel'>
-            {lista.map((dato) => (
+          { cargar ?(  
+          <div style={{textAlign:'center'}}>
+            <CircularProgress style={{color:'white'}} />
+            <div style={{fontSize:'50', color: 'white'}}>Cargando imagenes y datos</div>
+          </div>
+
+          ):(
+            lista.map((dato) => (
             <Carousel.Item className='Carousel.Item' interval={2000} key={dato._id}>
                 <div className='d-flex align-items-center justify-content-center'>
                    <a className='link' href={`/contenido/${dato._id}`}><img
@@ -56,7 +66,9 @@ function Carrusel() {
                     </div>
                 </Carousel.Caption>
             </Carousel.Item>
-              ))}
+              ))
+
+              )}
         </Carousel><br></br>
         <Container className='containerCarrusel' style={{color: 'white', maxWidth:'100%'}}>
           <Row>

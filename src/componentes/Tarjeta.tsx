@@ -1,5 +1,6 @@
 import Card from 'react-bootstrap/Card';
 import { useState, useEffect } from 'react';
+import CircularProgress from '@mui/material/CircularProgress';
 import axios from 'axios';
 import Url from './Url';
 
@@ -22,6 +23,7 @@ interface Informacion {
 function Tarjeta() {
  
   const [lista, setLista] = useState<Informacion[]>([]);
+  const [cargar, setCargar] = useState(true);
 
   useEffect(() => {
       obtenerlista();
@@ -31,6 +33,7 @@ function Tarjeta() {
     try {
       const res = await axios.get(Url.lista);
       setLista(res.data);
+      setCargar(false);
     } catch (error) {
       console.error(error);
     }
@@ -40,7 +43,15 @@ function Tarjeta() {
   return (
     <>
     <div style={{marginTop:'80px'}}>
-    {lista.map((dato)=>(
+    { cargar ?(  
+          <div style={{textAlign:'center', height:'400px'}}>
+            <CircularProgress style={{color:'white'}} />
+            <div style={{fontSize:'50', color: 'white'}}>Cargando...</div>
+            <div style={{fontSize:'50', color: 'white'}}>Espere un momento por favor</div>
+          </div>
+
+          ):(
+    lista.map((dato)=>(
     <Card className='tarjeta' key={dato._id}>
       <a href={`/contenido/${dato._id}`} > 
         <Card.Img className='imagenTarjeta' variant='top' src={dato.urlimagen1}  />
@@ -56,7 +67,9 @@ function Tarjeta() {
       </a>
     </Card>
     
-    ))}
+    ))
+
+   )}
     </div>
     </>
   );
