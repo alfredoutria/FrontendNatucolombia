@@ -1,3 +1,5 @@
 git add --all
 git commit -m"actualizando el proyecto"
 git push -u origin main
+
+archivo _redirects en la  carpeta public y despues colocando esto cuando se suba en netifly /* /index.html 200 
