@@ -44,7 +44,7 @@ function Tarjeta() {
     <>
     <div style={{marginTop:'80px'}}>
     { cargar ?(  
-          <div style={{textAlign:'center', height:'400px'}}>
+          <div className='cargandoMovil'>
             <CircularProgress style={{color:'white'}} />
             <div style={{fontSize:'50', color: 'white'}}>Cargando...</div>
             <div style={{fontSize:'50', color: 'white'}}>Espere un momento por favor</div>

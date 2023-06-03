@@ -43,7 +43,7 @@ function Carrusel() {
       <>
         <Carousel className='Carousel'>
           { cargar ?(  
-          <div style={{textAlign:'center'}}>
+          <div className='cargando'>
             <CircularProgress style={{color:'white'}} />
             <div style={{fontSize:'50', color: 'white'}}>Cargando imagenes y datos</div>
           </div>

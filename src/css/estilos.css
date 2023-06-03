@@ -4,6 +4,16 @@
   font-family:Arial, Helvetica, sans-serif;
 }
 
+.cargando{
+  display: block;
+  text-align: center;
+}
+
+.cargandoMovil{
+  display: none;
+}
+
+
 .fondo{
   background-image: url('../material/fondo.jpg');
   background-size: cover;
@@ -262,6 +272,18 @@ footer {
 }
 
 @media(max-width: 768px) {
+
+
+  .cargando{
+    display: none;
+  }
+  
+  .cargandoMovil{
+    display: block;
+    text-align: center;
+    height: 400px;
+  }
+  
 
   .navbar {
     background-color: white;

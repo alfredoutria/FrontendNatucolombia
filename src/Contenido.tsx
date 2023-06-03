@@ -155,33 +155,3 @@ function Contenido() {
 }
 
 export default Contenido;
-
-
-/*
-
- <Container className='movilContainer' style={{ maxWidth: "95%" }}>
-        <Row >
-          <Col  data-aos="fade-right" xs={12} md={6}>
-            <img className='columnaImagen' src={dato.urlimagen1} alt="imagen" />
-          </Col>
-          <Col data-aos="fade-left" xs={12} md={6}>
-            <img className='columnaImagen' src={dato.urlimagen2} alt="imagen" />
-          </Col>
-        </Row>
-      </Container>
-      
-
-
-
-      <Container className='movilContainer' style={{ maxWidth: "95%" }}>
-        <Row data-aos="fade-right" >
-          <Col  data-aos="zoom-in" xs={12} md={6}>
-            <img className='columnaImagen' src={dato.urlimagen3}  alt="imagen" />
-          </Col>
-          <Col  data-aos="fade-left" xs={12} md={6}>
-            <img className='columnaImagen' src={dato.urlimagen4}  alt="imagen" />
-          </Col>
-        </Row>
-      </Container>
-
-*/
